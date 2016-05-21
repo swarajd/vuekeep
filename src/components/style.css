@@ -56,3 +56,6 @@ form.create-note button{
   word-wrap: break-word;
   font-family: inherit;
 }
+.bricklayer-column-sizer {
+  width: 20%;
+}

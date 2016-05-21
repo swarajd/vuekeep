@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { deleteNote } from '../vuex/actions'
+import { deleteNote } from '../vuex/actions';
 
 export default {
     props: ['note'],
