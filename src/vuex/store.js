@@ -11,8 +11,9 @@ const state = {
 }
 
 const mutations = {
-    ADD_NOTE(state, title, text) {
+    ADD_NOTE(state, title, text, uuid) {
         state.notes.push({
+            uuid,
             title,
             text
         })
@@ -20,6 +21,17 @@ const mutations = {
 
     DELETE_NOTE(state, note) {
         state.notes.$remove(note);
+    },
+
+    UPDATE_NOTE(state, note) {
+        state.notes = state.notes.map((nt) => {
+            if (nt.uuid == note.uuid) {
+                console.log('matches');
+                nt.title = note.title;
+                nt.text = note.text;
+            }
+            return nt;
+        });
     }
 }
 
